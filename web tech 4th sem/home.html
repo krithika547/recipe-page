@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLAVOUR JUNCTION</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5dc; /* Attractive background color */
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      width: 25%;
+      background-color: transparent; /* Removed background color for simplicity */
+      padding: 20px;
+    }
+
+    .sidebar h3 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+    }
+
+    /* Search bar styles */
+    .search-bar {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .search-bar input {
+      width: 40%;
+      padding: 8px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* Table styles */
+    .recipes {
+      width: 75%;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f4a261;
+      color: white;
+    }
+
+    img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #0073e6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    FLAVOUR JUNCTION
+  </header>
+  <div class="search-bar">
+    <input type="text" placeholder="Search recipes...">
+  </div>
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <label for="cuisine">Cuisine</label>
+      <select id="cuisine">
+        <option value="asian">Asian</option>
+        <option value="american">American</option>
+        <option value="thai">Thai</option>
+        <option value="chinese">Chinese</option>
+      </select>
+
+      <label for="meal-type">Type of Meal</label>
+      <select id="meal-type">
+        <option value="breakfast">Breakfast</option>
+        <option value="brunch">Brunch</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="snacks">Snacks</option>
+        <option value="drinks">Drinks</option>
+      </select>
+    </aside>
+    <section class="recipes">
+      <table>
+        <thead>
+          <tr>
+            <th>Recipe</th>
+            <th>Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="biriyani2.jpeg" alt="Biryani"></td>
+            <td><a href="https://www.indianhealthyrecipes.com/chicken-biryani-recipe/">Biryani</a></td>
+            <td><button>Save Recipe</button></td>
+          </tr>
+          <tr>
+            <td><img src="Noodles-3.jpg" alt="Noodles"></td>
+            <td><a href="https://www.indianhealthyrecipes.com/veg-noodles-recipe/">Noodles</a></td>
+            <td><button>Save Recipe</button></td>
+          </tr>
+          <tr>
+            <td><img src="momos.jpeg" alt="Momos"></td>
+            <td><a href="https://www.vegrecipesofindia.com/veg-momos-recipe-vegetable-momos/">Momos</a></td>
+            <td><button>Save Recipe</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
