@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(200, 244, 214, 0.9);
+        }
+        .recipe-title {
+            text-align: center;
+            margin: 30px 0;
+            
+        }
+        /*.video-card {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }*/
+        .card {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 10px;
+            background: #ddcd9d;
+        }
+        .content-card .card {
+            flex: 1;
+            background: #7d4c63;
+        }
+        .card-body ul li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .card-body ul li.checked {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="recipe-title">Pretzels</h1>
+        
+        <div class="d-flex justify-content-between gap-3">
+            <div class="card" style="flex: 1;">
+                <img src="Pretzels.jpg" class="card-img-top p-3" alt="Recipe Image">
+                <div class="card-body">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ysDS3zTyFRI?si=FxdNLMMvOc9Qys6n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Preparation & Cooking Time</h4>
+                    <p>Prep Time: 15 mins</p>
+                    <p>Cook Time: 1 hour</p>
+                    <h4>Ingredients</h4>
+                    <ul id="ingredient-list">
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 cup warm milk</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 package instant yeast</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">3 tablespoons brown sugar</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">2 tablespoons melted butter</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 teaspoon salt</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">2 1/4 cups all-purpose flour</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">more flour for dusting</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/4 cup baking soda whisked into 3–4 cups warm water</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Step-by-Step Instructions</h4>
+                    <ol>
+                        <li>Make the Dough: In a mixing bowl, gently whisk the warm milk, yeast, brown sugar, butter, and salt. Stir in the flour until a dough forms. Transfer the dough to a floured surface and knead 10-15 times.</li>
+                        <li>Let the Dough Hang Out: Return to the bowl and drizzle with a little oil to prevent sticking. Cover with a cloth or plastic wrap and set aside for an hour to rise.</li>
+                        <li>Pretzel-ify: When the dough has risen, punch it back down and divide it into 6-8 sections. Roll each section into a loooong skinny rope. Fold it into a pretzel. Dip into the baking soda solution and place on a parchment-lined baking sheet.</li>
+                        <li>Bake: Brush with the beaten egg and sprinkle with salt. Bake at 450 degrees for 10-12 minutes, until golden brown. YUUUUUM! Dip in cheese sauce, mustard, or my personal favorite – beer cheese soup.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+       <!-- <div class="video-card">
+            <div class="card" style="width: 560px;">
+                <div class="card-body">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/6XlMguO9r-M?si=t6omubn4Djuz16fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    -->
+        
+        <div class="back-button">
+            <a href="home.html" class="btn btn-primary">Back to Main Menu</a>
+        </div>
+    </div>
+    <script>
+        function toggleStrike(element) {
+            element.classList.toggle("checked");
+            let checkbox = element.querySelector("input[type='checkbox']");
+            checkbox.checked = !checkbox.checked;
+        }
+        
+        function toggleCheckbox(event, checkbox) {
+            event.stopPropagation();
+            let listItem = checkbox.parentElement;
+            listItem.classList.toggle("checked");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

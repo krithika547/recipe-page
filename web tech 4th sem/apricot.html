@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(200, 244, 214, 0.9);
+        }
+        .recipe-title {
+            text-align: center;
+            margin: 30px 0;
+            
+        }
+        /*.video-card {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }*/
+        .card {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 10px;
+            background: #ddcd9d;
+        }
+        .content-card .card {
+            flex: 1;
+            background: #7d4c63;
+        }
+        .card-body ul li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .card-body ul li.checked {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="recipe-title">Apricot Sesame Tofu</h1>
+        
+        <div class="d-flex justify-content-between gap-3">
+            <div class="card" style="flex: 1;">
+                <img src="Apricot-Sesame-Tofu.jpg" class="card-img-top p-3" alt="Recipe Image">
+                <div class="card-body">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VqQCCScUHAA?si=iI2T4myVQWc4g65b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Preparation & Cooking Time</h4>
+                    <p>Prep Time: 10 mins</p>
+                    <p>Cook Time: 30 mins</p>
+                    <h4>Ingredients</h4>
+                    <ul id="ingredient-list">
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 block of extra firm tofu</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">2 tablespoons cornstarch</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 tablespoon soy sauce</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">2 tablespoons olive oil</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/3 cup apricot preserves</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/2 teaspoon each cumin, paprika, and onion powder</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1–2 cloves garlic, grated (2 for more garlic flavor, obviously)</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 cup rice</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1–2 tablespoons toasted sesame oil to taste</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Step-by-Step Instructions</h4>
+                    <ol>
+                        <li >Cut the tofu block in half horizontally (like a hamburger). If using extra firm high protein tofu, it helps to cut it in half again horizontally. Press the water out of the tofu by wrapping it in paper towels and setting a few heavy books on top of it. Let it stay like that for a few minutes while you prep the sauce.</li>
+                        <li>Whisk the sauce ingredients together. 
+                        </li>
+                        <li>Take each piece of tofu and gently pull it into small chunks with your hands (this just gives the tofu pieces a unique shape and texture that holds onto the sauce really well). Place the chunks in a bowl. Toss with soy sauce and a teaspoon or two of olive oil; then sprinkle with cornstarch and give it a few gentle tosses to coat.</li>
+                        <li>Before your start browning your tofu, cook your rice according to package directions and start your green beans! Steam, microwave, sautè – whatever your preferred green bean method is.</li>
+                        <li>In a nonstick skillet over medium high heat, heat the olive oil and then add the cornstarched tofu. Leave it undisturbed for a few minutes on each side, letting it get really nice and brown and crispy – this can take 10-15 minutes. Flip and repeat until the whole batch is browned and crispy.</li>
+                        <li>Finally, add the sauce to the tofu and remove from heat – the pan will still be hot, so it’ll be sizzly and smell really good from the garlic. The sauce will coat the tofu right away. *heart eyes*</li>
+                        <li>Top with the chives and/or cilantro and sesame oil. Serve with rice and green beans, and finish with more salt and lots of black pepper to taste. The tender crunch of the beans with the steamy rice and sticky tofu! SO good.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+       <!-- <div class="video-card">
+            <div class="card" style="width: 560px;">
+                <div class="card-body">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/6XlMguO9r-M?si=t6omubn4Djuz16fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    -->
+        
+        <div class="back-button">
+            <a href="home.html" class="btn btn-primary">Back to Main Menu</a>
+        </div>
+    </div>
+    <script>
+        function toggleStrike(element) {
+            element.classList.toggle("checked");
+            let checkbox = element.querySelector("input[type='checkbox']");
+            checkbox.checked = !checkbox.checked;
+        }
+        
+        function toggleCheckbox(event, checkbox) {
+            event.stopPropagation();
+            let listItem = checkbox.parentElement;
+            listItem.classList.toggle("checked");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

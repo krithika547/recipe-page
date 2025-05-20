@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(200, 244, 214, 0.9);
+        }
+        .recipe-title {
+            text-align: center;
+            margin: 30px 0;
+            
+        }
+        /*.video-card {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }*/
+        .card {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 10px;
+            background: #ddcd9d;
+        }
+        .card-body ul li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .content-card .card {
+            flex: 1;
+            background: #7d4c63;
+        }
+        .card-body ul li.checked {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="recipe-title">Crispy Black Bean Tacos</h1>
+        
+        <div class="d-flex justify-content-between gap-3">
+            <div class="card" style="flex: 1;">
+                <img src="Crispy-Black-Bean-TaCOS.jpg" class="card-img-top p-3" alt="Recipe Image">
+                
+                <div class="card-body">
+                    <hr>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yKAqXwcM8eI?si=cpJdNleDUg8VQdol" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Preparation & Cooking Time</h4>
+                    <p>Prep Time: 5 mins</p>
+                    <p>Cook Time: 20 mins</p>
+                    <hr>
+        <h5>Ingredients</h5>
+        <ul class="ingredients-list">
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 (14-ounce) can of black beans, rinsed and drained</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/4 cup of your favorite salsa</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 tablespoon taco seasoning</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">6–8 small flour tortillas</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/4 – 1/2 cup olive oil or butter for frying</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/4 cup avocado oil</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/2 cup chopped green onions</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/2 cup cilantro leaves</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">2 cloves garlic</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/2 cup sour cream (sub avocado to keep it dairy free / vegan)</li>
+            <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/4 cup water</li>
+        </ul>
+        </div>
+        </div>
+        <div class="card" style="flex: 1;">
+            <div class="card-body">
+                <h4>Step-by-Step Instructions</h4>
+                <ol>
+            <li>Blend all ingredients in the cilantro lime sauce until smooth-ish. Set aside.</li>
+            <li>In a food processor or chopper, blend the beans, salsa, and taco seasoning. Transfer to a skillet with a drizzle of oil and cook it up long enough to soften the flavors of the garlic and / or onions in the salsa. About 5 minutes is fine.</li>
+            <li>Spread a few tablespoons of black bean filling into a flour tortilla. Fold in half. Repeat until the filling is used up (about 6-8 tacos).</li>
+            <li>Heat some oil or butter in a skillet over medium heat. Fry in a skillet over medium heat, until crispy and golden brown. Dip in cilantro lime sauce. Serve with chips and salsa and a mid-week margarita. You’re welcome.</li>
+            
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+   <!-- <div class="video-card">
+        <div class="card" style="width: 560px;">
+            <div class="card-body">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/6XlMguO9r-M?si=t6omubn4Djuz16fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+-->
+    
+    <div class="back-button">
+        <a href="home.html" class="btn btn-primary">Back to Main Menu</a>
+    </div>
+</div>
+<script>
+    function toggleStrike(element) {
+        element.classList.toggle("checked");
+        let checkbox = element.querySelector("input[type='checkbox']");
+        checkbox.checked = !checkbox.checked;
+    }
+    
+    function toggleCheckbox(event, checkbox) {
+        event.stopPropagation();
+        let listItem = checkbox.parentElement;
+        listItem.classList.toggle("checked");
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

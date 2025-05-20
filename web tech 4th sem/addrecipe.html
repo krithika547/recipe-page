@@ -1,0 +1,25 @@
+<!-- addrecipe.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Recipe</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    form { max-width: 500px; margin: auto; background: #f2f2f2; padding: 20px; border-radius: 10px; }
+    input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
+    button { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+  <h2>Add New Recipe</h2>
+  <form action="/add" method="POST">
+    <input type="text" name="title" placeholder="Recipe Title" required>
+    <input type="text" name="videoUrl" placeholder="YouTube Video URL">
+    <textarea name="ingredients" placeholder="Ingredients (one per line)"></textarea>
+    <textarea name="steps" placeholder="Steps (one per line)"></textarea>
+    <input type="text" name="preparationTime" placeholder="Preparation Time">
+    <input type="text" name="cookingTime" placeholder="Cooking Time">
+    <button type="submit">Save Recipe</button>
+  </form>
+</body>
+</html>

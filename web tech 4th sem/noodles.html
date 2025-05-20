@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgba(200, 244, 214, 0.9);
+        }
+        .recipe-title {
+            text-align: center;
+            margin: 30px 0;
+            
+        }
+        /*.video-card {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }*/
+        .card {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 10px;
+            background: #ddcd9d;
+        }
+        .content-card .card {
+            flex: 1;
+            background: #7d4c63;
+        }
+        .card-body ul li {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .content-card .card {
+            flex: 1;
+            background: #7d4c63;
+        }
+        .card-body ul li.checked {
+            text-decoration: line-through;
+            color: gray;
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="recipe-title">Gochujang Noodles</h1>
+        
+        <div class="d-flex justify-content-between gap-3">
+            <div class="card" style="flex: 1;">
+                <img src="Noodles-3.jpg" class="card-img-top p-3" alt="Recipe Image">
+                <hr>
+                <div class="card-body">
+                    <iframe width=100% height=100% src="https://www.youtube.com/embed/uXGSBki-sIs?si=-OpJE2_t5oL0pqMF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Preparation & Cooking Time</h4>
+                    <p>Prep Time: 10 mins</p>
+                    <p>Cook Time: 20 mins</p>
+                    <hr>
+                    <h4>Ingredients</h4>
+                    <ul id="ingredient-list">
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 pound ground chicken (could also use pork)</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/2 teaspoon salt</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">freshly ground black pepper</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">2 packets ramen or stir fry noodles (just the noodles)</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1–2 cups fresh spinach</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1/4 cup chives, scallions, cilantro, basil, or whatever herbs you like for topping</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">salt to taste</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 tablespoon chili oil for finishing</li>
+                        <li onclick="toggleStrike(this)"><input type="checkbox" onclick="toggleCheckbox(event, this)">1 tablespoon sesame seeds for finishing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1;">
+                <div class="card-body">
+                    <h4>Step-by-Step Instructions</h4>
+                    <ol>
+                        <li>Whisk the sauce ingredients (except the extra broth) in a small bowl or shake together in a jar. It should form a thick sauce.</li>
+                        <li>Cook the chicken in a large skillet over medium high heat. Season generously with salt and pepper. </li>
+                        <li>Boil the noodles for just a few minutes to soften. Drain and set aside.</li>
+                        <li>When the chicken is done, add spinach, cooked noodles, and sauce to the pan, keeping it over medium high heat. Toss to combine; heat until the spinach is wilted. Add extra water or broth to thin the sauce, a little at a time, to get the sauciness that you like (I usually add about 1 1/2 cups total). </li>
+                        <li>Serve topped with fresh herbs, scallions, chili oil, sesame seeds, and whatever else you like. </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+       <!-- <div class="video-card">
+            <div class="card" style="width: 560px;">
+                <div class="card-body">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/6XlMguO9r-M?si=t6omubn4Djuz16fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    -->
+        
+        <div class="back-button">
+            <a href="home.html" class="btn btn-primary">Back to Main Menu</a>
+        </div>
+    </div>
+    <script>
+        function toggleStrike(element) {
+            element.classList.toggle("checked");
+            let checkbox = element.querySelector("input[type='checkbox']");
+            checkbox.checked = !checkbox.checked;
+        }
+        
+        function toggleCheckbox(event, checkbox) {
+            event.stopPropagation();
+            let listItem = checkbox.parentElement;
+            listItem.classList.toggle("checked");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
